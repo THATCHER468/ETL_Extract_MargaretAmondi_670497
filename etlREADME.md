@@ -1,10 +1,18 @@
-# ETL Extract Lab
+# ETL Extract and Transform Lab
 
 ## Description
-This project implements a basic ETL (Extract, Transform, Load) process focused on extraction for a data warehousing assignment. It includes:
-1.Full Extraction: Loads the entire `custom_data.csv` sales dataset and displays basic stats.
-2.Incremental Extraction: Extracts only new or updated records since the last extraction, tracked via `last_extraction.txt`.
-3.A synthetic dataset of 100 sales transactions (transaction ID, date, product, quantity, price).
+This project implements a basic ETL (Extract, Transform, Load) process focused on extraction and transformation of synthetic sales dataset, as part of a data warehousing assignment. 
+
+It includes:
+1. Full Extraction: Loads the entire `custom_data.csv` sales dataset and displays basic stats.
+2. Incremental Extraction: Extracts only new or updated records since the last extraction, tracked via `last_extraction.txt`.
+3. Transformation: Applies data cleaning, enrichment, and categorization to both full and incremental datasets.
+4. A synthetic dataset of 100 sales transactions (transaction ID, date, product, quantity, price).
+
+## Transformation Techniques Applied
+1. Cleaning: Removed duplicate rows from datasets.
+2. Enrichment: Added `total_price` column (`quantity * price`).
+3. Categorization: Created `price_category` column to label items as "Low", "Medium", or "High" based on price.
 
 ## Tools Used
 . Python 3
@@ -25,4 +33,5 @@ This project implements a basic ETL (Extract, Transform, Load) process focused o
 4. Expected Output:
    - Full extraction shows stats for all 100 rows.
    - Incremental extraction filters records after the timestamp in `last_extraction.txt`.
+
 
