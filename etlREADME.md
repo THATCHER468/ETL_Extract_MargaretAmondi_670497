@@ -14,10 +14,11 @@ It includes:
 2. Enrichment: Added `total_price` column (`quantity * price`).
 3. Categorization: Created `price_category` column to label items as "Low", "Medium", or "High" based on price.
 
-## Load (`etl_load.ipynb`)
+## Load (`etl_load.ipynb`)-LAB 5
 - Loaded the transformed data
 - Saved it to efficient Parquet format using `pandas.to_parquet()`
 - Previewed results using `pd.read_parquet().head()`
+- sample code `python `: full_data.to_parquet('loaded_data/full_data.parquet', index=False)
 
 ## Saved files into `loaded_data/` folder as:
 - `full_data.parquet`
