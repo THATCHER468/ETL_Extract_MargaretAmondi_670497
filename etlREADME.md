@@ -14,10 +14,20 @@ It includes:
 2. Enrichment: Added `total_price` column (`quantity * price`).
 3. Categorization: Created `price_category` column to label items as "Low", "Medium", or "High" based on price.
 
+## Load (`etl_load.ipynb`)
+- Loaded the transformed data
+- Saved it to efficient Parquet format using `pandas.to_parquet()`
+- Previewed results using `pd.read_parquet().head()`
+
+## Saved files into `loaded_data/` folder as:
+- `full_data.parquet`
+- `incremental_data.parquet`
+
 ## Tools Used
 . Python 3
 . pandas (for data handling)
 . Jupyter Notebook (for implementation and documentation)
+. parquet via pyrraw
 
 ## How to Reproduce
 1. Setup:
@@ -33,5 +43,6 @@ It includes:
 4. Expected Output:
    - Full extraction shows stats for all 100 rows.
    - Incremental extraction filters records after the timestamp in `last_extraction.txt`.
+   - 
 
 
